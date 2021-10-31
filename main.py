@@ -9,7 +9,6 @@ intents.members = True
 client = discord.Client(intents=intents)
 DiscordComponents(client)
 data = OrderedDict()
-invites = {}
 
 @client.event
 async def on_connect():
