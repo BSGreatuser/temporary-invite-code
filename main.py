@@ -124,5 +124,3 @@ async def on_member_join(member):
             
 
 client.run(token)
-
-# 입장 초대주소 확인 > https://stackoverflow.com/questions/67498590/see-the-invite-code-used-by-a-person-who-joins-with-discord-py
