@@ -1,4 +1,5 @@
 token = '토큰'
+guild_id = '본서버 아아디'
 
 import discord, asyncio, re, os, json, shutil
 from discord_components import DiscordComponents, Button, ButtonStyle, Select, SelectOption
@@ -116,6 +117,9 @@ async def on_button_click(interaction):
 
 @client.event
 async def on_member_join(member):
+    if not member.guild.id == guild_id:
+        return
+    
     if not os.path.isdir(f'발급/{member.id}/w'):
         with open('white.txt', 'r') as f:
             list = f.read()
